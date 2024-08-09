@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0142970ec2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+               
+                <ul id="sidemenu">
+                    <li> <a href="#header">Home</a></li>
+                    <li> <a href="#about">About</a></li>
+                    <li> <a href="#services">Services</a></li>
+                    <li> <a href="#social">Social</a></li>
+                    <li> <a href="#contact">Contact</a></li>
+                 
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Developer</p>
+                <h1>Hi, I'm <span>Varun</span> <span>kumar</span> <br> From AITAM</h1>
+            </div>
+        </div>
+    </div>
+    <!-- -----about----- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="sample.png" alt="Your Image">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>This is Varun Kumar. I am from Srikakulam, and I am graduating from Aditya Institute of Technology and Management with a CGPA of 7.98.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Development</span><br>Frontend Developer</li>
+                            <li><span>Languages</span><br>C, C++, DSA in C++, Python, Java basics</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>July 2024</span><br>Web Developer intern at Bharat Intern</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022-2026</span><br>Aditya Institute of Technology and Management (B.Tech)</li>
+                            <li><span>2022</span><br>Sri Viswa Junior College (XII)</li>
+                            <li><span>2020</span><br>Gethanjali School (X)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ------services------ -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2><span>Developer</span> </h2>
+                    <p>This is varun kumar I am from srikakulam and i graduting in Aditya Institute of Technology and Management</p>
+           
+                </div>
+                <div>
+                    <i class="fa-solid fa-globe"></i>
+                    <h2><Span>C++ Developer</Span></h2>
+                    <p>This is varun kumar I am from srikakulam and i graduting in Aditya Institute of Technology and Management</p>
+                 
+                </div>
+                <div>
+                    <i class="fa-brands fa-python"></i>
+                    <h2><span>Python Developer</span></h2>
+                    <p>This is varun kumar I am from srikakulam and i graduting in Aditya Institute of Technology and Management</p>
+             
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- -------SOCIAL--- -->
+         <div id="social">
+            <div class="container">
+            <div class="social-icons">
+                <h1 class="sub-title">Social-media</h1>
+                    <a href="https://www.instagram.com/varunkumar_voonna?igsh=YTNzaHN6ZG9zYjZk" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/voonna-varunkumar-97b34a245" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://x.com/voonnavaru40110?t=YDaI8b9QZfhWpGJspFD-8A&s=09" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>  
+           
+        </div>
+            </div>
+
+         
+    <!-- -------contact--- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact</h1>
+                    <p><i class="fa-solid fa-envelope"></i>varunkumarvoonna@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>7780340845</p>
+              
+        </div>
+        <div class="copyright">
+            <p>Copyright <i class="fa-regular fa-copyright"></i> VARUN <i class="fa-solid fa-heart" style="color: red;"></i></p>
+        </div>
+    </div>
+    </div>
+</div>
+<!-- --------for tab links------ -->
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab (tabname){
+        for (tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+</body>
+</html>
